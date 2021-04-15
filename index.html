@@ -9,18 +9,25 @@
     <title>Document</title>
 </head>
 <body>
-    <section class="">
+    <section class="search-section">
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Enter a city name:</label>
             <input type="text" class="form-control" id="search-box" placeholder="City name">
             <button type="submit" class="btn btn-primary mb-3" id="search">Search</button>
         </div>
     </section>
-
     <!-- where the forcast is displayed -->
-    <div>
+    <div id="forcast-container">
+        <div id="current-weather">
+            <h1 id="city-name"></h1>
+            <h2 id=""></h2>
+        </div>
+        <div id="future-weather">
+            <ul id="weather-cards"></ul>
+        </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js" integrity="sha512-BrvVYNhKh6yST24E5DY/LopLO5d+8KYmIXyrpBIJ2PK+CyyJw/cLSG/BfJomWLC1IblNrmiJWGlrGueKLd/Ekw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.4/dayjs.min.js" integrity="sha512-0fcCRl828lBlrSCa8QJY51mtNqTcHxabaXVLPgw/jPA5Nutujh6CbTdDgRzl9aSPYW/uuE7c4SffFUQFBAy6lg==" crossorigin="anonymous"></script>
     <script src="./assets/js/script.js"></script>
 </body>
 </html>
