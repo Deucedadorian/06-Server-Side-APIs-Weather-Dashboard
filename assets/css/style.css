@@ -2,3 +2,61 @@ body {
     display: flex;
     flex-direction: row;
 }
+
+#current-weather {
+    /* border: 1px solid black; */
+    background-color: rgb(54, 146, 189);
+    box-shadow: 5px 4px 10px black;
+}
+
+#uvi-low {
+    background-color: green;
+    color: white;
+    padding: 0px 5px 0px 5px;
+    border-radius: 5px;
+}
+
+#uvi-moderate {
+    background-color: rgb(255, 255, 0);
+    color: rgb(35, 56, 245);
+    padding: 0px 5px 0px 5px;
+    border-radius: 5px;
+}
+
+#uvi-high {
+    background-color: orange;
+    color: white;
+    padding: 0px 5px 0px 5px;
+    border-radius: 5px;
+}
+
+#uvi-very-high {
+    background-color: red;
+    color: white;
+    padding: 0px 5px 0px 5px;
+    border-radius: 5px;
+}
+
+#uvi-extreme {
+    background-color: purple;
+    color: white;
+    padding: 0px 5px 0px 5px;
+    border-radius: 5px;
+}
+
+#weather-cards {
+    padding: 0px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+li {
+    background-color: rgb(83, 83, 83);
+    color: rgb(226, 226, 226);
+    box-shadow: 5px 5px 10px black;
+    margin: 0px 5px 0px 5px;
+}

@@ -15,15 +15,56 @@
             <input type="text" class="form-control" id="search-box" placeholder="City name">
             <button type="submit" class="btn btn-primary mb-3" id="search">Search</button>
         </div>
+        <div class="list-group"></div>
     </section>
-    <!-- where the forcast is displayed -->
-    <div id="forcast-container">
+    <!-- where the forecast is displayed -->
+    <div id="forecast-container">
         <div id="current-weather">
-            <h1 id="city-name"></h1>
-            <h2 id=""></h2>
+            <h2 id="city-name"></h2>
+            <h3 id="temp"></h3>
+            <h3 id="wind"></h3>
+            <h3 id="humidity"></h3>
+            <h3 id="uv-index"></h3>
         </div>
         <div id="future-weather">
-            <ul id="weather-cards"></ul>
+            <h2></h2>
+            <ul id="weather-cards">
+                <li id="0">
+                    <h3 class="date"></h3>
+                    <img>
+                    <h4 class="temp"></h4>
+                    <h4 class="wind"></h4>
+                    <h4 class="humidity"></h4>
+                </li>
+                <li id="1">
+                    <h3 class="date"></h3>
+                    <img>
+                    <h4 class="temp"></h4>
+                    <h4 class="wind"></h4>
+                    <h4 class="humidity"></h4>
+                </li>
+                <li id="2">
+                    <h3 class="date"></h3>
+                    <img>
+                    <h4 class="temp"></h4>
+                    <h4 class="wind"></h4>
+                    <h4 class="humidity"></h4>
+                </li>
+                <li id="3">
+                    <h3 class="date"></h3>
+                    <img>
+                    <h4 class="temp"></h4>
+                    <h4 class="wind"></h4>
+                    <h4 class="humidity"></h4>
+                </li>
+                <li id="4">
+                    <h3 class="date"></h3>
+                    <img>
+                    <h4 class="temp"></h4>
+                    <h4 class="wind"></h4>
+                    <h4 class="humidity"></h4>
+                </li>
+            </ul>
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js" integrity="sha512-BrvVYNhKh6yST24E5DY/LopLO5d+8KYmIXyrpBIJ2PK+CyyJw/cLSG/BfJomWLC1IblNrmiJWGlrGueKLd/Ekw==" crossorigin="anonymous"></script>
