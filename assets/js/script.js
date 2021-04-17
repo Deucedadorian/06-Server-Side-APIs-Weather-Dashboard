@@ -6,9 +6,8 @@ let searchBtn = $('#search');
 
 function weatherReport(city) {
 
-    // The text box \/
-    let cityName =  city || $('#search-box').val();
-    // let cityName = city || 'boston'
+    // let cityName =  city || $('#search-box').val();
+    let cityName = city;
 
     // TODO: whats the right kind of api call to use?
     fetch('https://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&appid=568ff9fafd7d7202b5ec934736eda812')
@@ -28,15 +27,14 @@ function weatherReport(city) {
     }).then(function (response) {
         return response.json();
 
-    }).then(function(weatherData) {
+    }).then(function(weatherData) { 
 
         let uvi = weatherData.current.uvi;
 
         // capitalize first letter of city name and put the text in h1
         cityName = cityName.charAt(0).toUpperCase() + cityName.slice(1).toLowerCase();
         $('#city-name').text(cityName + ' ' + dayjs().format('MM-DD-YYYY')).append('<img class=\'icon\'>');
-
-        // this my be a problem later if I use icon class again   
+  
         $('.icon').attr('src', 'http://openweathermap.org/img/wn/' + weatherData.current.weather[0].icon + '@2x.png');
        
         // set the text content for the the rest of the weather data
@@ -73,28 +71,14 @@ function weatherReport(city) {
             $('#' + i).children('.humidity').text('Humidity: ' + weatherData.daily[i].humidity + ' %');
         }
 
-        // TODO: then push it to an array and save it to local storage
-        // if (searchedCities.length === 0) {
-        //     searchedCities.push(cityName);
-        // } else if (searchedCities.length > 0) {
-        //     for (let i = 0; i < searchedCities.length; i++) {
-        //         if (cityName === searchedCities[i]) {
-        //             return;
-        //         } else if (i === searchedCities.length - 1 && cityName !== searchedCities[i]) {
-        //             searchedCities.push(cityName);
-        //             return;
-        //         }
-        //     }
-        // }
-
+        // checks to see if the city name has already been searched and adds it to the array if not
         if (!searchedCities.includes(cityName)) {
             searchedCities.push(cityName)
         }
 
         localStorage.setItem('searchedCities', JSON.stringify(searchedCities));
-
+        renderPastCities();
     });
-
 }
 
 function renderPastCities() {
@@ -110,6 +94,7 @@ function renderPastCities() {
                 weatherReport(city)
             })
     }
+
 }
 
 searchBtn.on('click', () => weatherReport($('#search-box').val()));
