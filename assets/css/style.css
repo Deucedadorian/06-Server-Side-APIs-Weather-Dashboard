@@ -85,9 +85,7 @@ button {
 }
 
 @media screen and (max-width: 750px) {
-    /* #current-weather {
-        width: 400px;
-    } */
+
     #weather-cards {
         display:unset;
     }
