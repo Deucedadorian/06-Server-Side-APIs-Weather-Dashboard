@@ -42,8 +42,8 @@ function weatherReport(city) {
         $('#wind').text('Wind: ' + weatherData.current.wind_speed + ' MPH');
         $('#humidity').text('Humidity: ' + weatherData.current.humidity + ' %');
         $('#uv-index').text('UV-index: ').append('<span id=\'uv-color\'></span>');
+        $('#current-weather').css("padding", "10px");
         let uvColor = $('#uv-color').text(uvi);
-
 
         // coloring the uv index
         if (uvi < 3) {
@@ -63,12 +63,16 @@ function weatherReport(city) {
 
         // populates li with data 
         for (let i = 0; i < 5; i++) {
+
+            let futureCard = $('#' + i);
+
             let date = dayjs.unix(weatherData.daily[i].dt).format('MM-DD-YYYY');
-            $('#' + i).children('.date').text(date);
-            $('#' + i).children('img').attr('src', 'http://openweathermap.org/img/wn/' + weatherData.daily[i].weather[0].icon + '@2x.png')
-            $('#' + i).children('.temp').text('Temp: ' + weatherData.daily[i].temp.day + ' °F');
-            $('#' + i).children('.wind').text('Wind: ' + weatherData.daily[i].wind_speed + ' MPH');
-            $('#' + i).children('.humidity').text('Humidity: ' + weatherData.daily[i].humidity + ' %');
+            futureCard.children('.date').text(date);
+            futureCard.children('img').attr('src', 'http://openweathermap.org/img/wn/' + weatherData.daily[i].weather[0].icon + '@2x.png')
+            futureCard.children('.temp').text('Temp: ' + weatherData.daily[i].temp.day + ' °F');
+            futureCard.children('.wind').text('Wind: ' + weatherData.daily[i].wind_speed + ' MPH');
+            futureCard.children('.humidity').text('Humidity: ' + weatherData.daily[i].humidity + ' %');
+            futureCard.css("padding", "10px 10px 0px 10px");
         }
 
         // checks to see if the city name has already been searched and adds it to the array if not
@@ -98,4 +102,4 @@ function renderPastCities() {
 }
 
 searchBtn.on('click', () => weatherReport($('#search-box').val()));
-renderPastCities()
+renderPastCities();

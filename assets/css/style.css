@@ -1,12 +1,33 @@
-body {
+header {
+    border-bottom: 2px solid black;
+    background-color: rgb(34, 134, 126);
+    color: rgb(255, 162, 55);
+    margin-bottom: 30px;
+}
+header h1 {
+    text-align: center;
+    font-weight: 700;
+}
+
+main {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+}
+
+.search-section {
+    margin-left: 10px;
 }
 
 #current-weather {
     /* border: 1px solid black; */
     background-color: rgb(54, 146, 189);
     box-shadow: 5px 4px 10px black;
+    margin-left: 10px;
+}
+
+#future-weather {
+    margin-top: 50px;
 }
 
 #uvi-low {
@@ -46,12 +67,10 @@ body {
 
 #weather-cards {
     padding: 0px;
-}
-
-ul {
     list-style: none;
     display: flex;
     justify-content: space-between;
+    /* flex-wrap: wrap; */
 }
 
 li {
@@ -59,4 +78,17 @@ li {
     color: rgb(226, 226, 226);
     box-shadow: 5px 5px 10px black;
     margin: 0px 5px 0px 5px;
+}
+
+button {
+    margin: 5px;
+}
+
+@media screen and (max-width: 750px) {
+    /* #current-weather {
+        width: 400px;
+    } */
+    #weather-cards {
+        display:unset;
+    }
 }
