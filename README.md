@@ -24,6 +24,7 @@ type a city name into the search box. cards will appear containing current and f
 * HTML
 * CSS
 * JavaScript
+* Bootstrap
 * Day.js
 * zepto.js
 
