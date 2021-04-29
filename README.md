@@ -13,7 +13,7 @@ https://deucedadorian.github.io/06-Server-Side-APIs-Weather-Dashboard/
 - [Technology Used](#technology-used)
 - [Screenshots](#screenshots)
 - [License](#license)
-- [Contact](#contact)
+- [Contact](#contact) 
 
 ## Usage
 
