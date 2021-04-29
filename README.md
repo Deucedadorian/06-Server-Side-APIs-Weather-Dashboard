@@ -20,7 +20,7 @@ https://deucedadorian.github.io/06-Server-Side-APIs-Weather-Dashboard/
 type a city name into the search box. cards will appear containing current and future weather data. A button will be appended to the document under the search box. Click the button to see weather conditions for that city.
 
 ## Technology Used
-
+ 
 * HTML
 * CSS
 * JavaScript
