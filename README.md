@@ -23,6 +23,12 @@ type a city name into the search box. cards will appear containing current and f
 
 ![Screenshot of deployed app #2](assets/images/deucedadorian.github.io_06-Server-Side-APIs-Weather-Dashboard_2.png)
 
+## Contact
+
+### Email
+
+Dylan Cole <logboarddjc@gmail.com>
+
 ## License
 
 MIT License
