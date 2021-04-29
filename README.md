@@ -10,7 +10,7 @@ https://deucedadorian.github.io/06-Server-Side-APIs-Weather-Dashboard/
 
 ## Table of Contents
 - [Usage](#usage)
-- [Technology Used](#technology used)
+- [Technology Used](#technologyused)
 - [Screenshots](#screenshots)
 - [License](#license)
 - [Contact](#contact)
