@@ -2,7 +2,7 @@
 
 ## Description 
 
-This app allows you to search for currnet and future weather conditions by city name. Once a city has been searched, the city is saved to local storage and I button is appended to the search section. When the button is clicked, the app will reload data for that city.
+This app allows you to search for current and future weather conditions by city name. Once a city has been searched, the city is saved to local storage and I button is appended to the search section. When the button is clicked, the app will reload data for that city.
 
 ## Link to deployed App
 
